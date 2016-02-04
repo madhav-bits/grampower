@@ -1,0 +1,48 @@
+######################################################################     DESIGN DOCUMENT   #####################################################################
+Author:K.Sai Madhav
+Organization:Grampower India Private Limited.
+
+######################################################################Programming Assignment ######################################################################
+
+#Assumption: Considering an infinite length input sequence from STDIN.
+
+#The location of the github repository is: https://github.com/madhav-bits/grampower.git
+
+#I did a single push into git repository after making all the improvements to the code, so i think you won't be able to locate any siginificant 
+commits and branches.
+
+A parser code looking for a character sequence stored in "subString" variable, in a sequence of input characters.
+
+
+main function gets input from the STDIN characterwise(character per iteration) and pass the character into function for furthur processing.
+
+The substring to search for can be given manually,stored in "subString" variable.
+
+For example consider that substring is "hello".
+
+Considered ' ' in the beginning and at the end of substring to eliminate the cases of accepting the "shello" and "hellok" cases.
+
+Length of revised substring is placed in  "length" variable.
+
+Input character from STDIN is passed it to the function(parForHello).
+
+"count" is the index of the substring character that is expected to match with the next character input from STDIN.
+
+Whenver a character that's not expected from the STDIN is encountered, then the "count" index will be equated to "zero"(Once parse function again starts expecting  the first index of the substring (' ') in the next iteration).
+
+The instant count=length, i.e.,there are "length" time consecutive characters matches from the STDIN, this marks the perfect occurence of the word we are parsing for.
+
+token=' ', makes count=0, eliminates the case of not accepting the match, when the input sequence begins with a space bar.
+
+Once perfect match is found, then "1" would be returned to the main function.
+
+As "subStrFound" variable is equated to "1" then execution goes out of the while loop and code execution gets done.
+
+
+
+
+
+
+
+
+
